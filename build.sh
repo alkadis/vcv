@@ -1,10 +1,10 @@
 #!/bin/sh
 
 DEFAULT_BRANCH=develop
-GIT_URL=https://github.com/liqd/adhocracy
+GIT_URL=https://github.com/alkadis
 SERVICE_TEMPLATE=etc/sysv-init.in
-SERVICE_TEMPLATE_URL=https://raw.github.com/liqd/adhocracy/$DEFAULT_BRANCH/$SERVICE_TEMPLATE
-CHECK_PORT_FREE_URL=https://raw.github.com/liqd/adhocracy/$DEFAULT_BRANCH/scripts/check_port_free.py
+SERVICE_TEMPLATE_URL=https://github.com/alkadis/vcv/$DEFAULT_BRANCH/$SERVICE_TEMPLATE
+CHECK_PORT_FREE_URL=https://github.com/alkadis/vcv/$DEFAULT_BRANCH/scripts/check_port_free.py
 SUPERVISOR_PORTS="5005 5006 5010"
 ADHOCRACY_PORT=5001
 
@@ -33,7 +33,7 @@ buildout_cfg_file=
 autostart=true
 setup_services=true
 not_use_sudo_commands=false
-not_use_user_commands=false
+not_use_user_commands=true
 adhoc_user=$USER
 install_mysql_client=false
 arch_install=false
